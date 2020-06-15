@@ -1,0 +1,15 @@
+.image-gallery-slide img {
+    height: 450px;
+}
+
+.image-gallery-thumbnails .image-gallery-thumbnails-container {
+    cursor: default !important;
+}
+
+.image-gallery-thumbnail:hover {
+    cursor: pointer;
+}
+
+.image-gallery-left-nav .image-gallery-svg, .image-gallery-right-nav .image-gallery-svg {
+    height: 60px;
+}
