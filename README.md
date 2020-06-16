@@ -1,5 +1,6 @@
 노마드 코더님의 인스타그램 클론코딩 강의에 기반하고 있습니다.
 자바스크립트와 JSX에 익숙하거나 강의를 수강하신 분을 대상으로 작성하였습니다.  
+  
 **다른점**
 ```
 1. Prisma2 사용
@@ -8,9 +9,13 @@
 4. 멀티 사진 선택기, 인스타그램 댓글 UI 카피 등
 ```
 참조 : [준동's 인스타그램 클론코딩 ](https://joondong.tistory.com/92)
+# 빌드 및 테스트
+    yarn start
+  
 # 수정할 내용
 ### 1. src/Apollo/Client.js
 ENDPOINT 설정  
+  
 **예제**
 ```
 export default new ApolloClient({
@@ -28,6 +33,7 @@ export default options;
 ### 2. src/aws-exports.js
 `amplify push` 명령어에 의해 자동으로 생성된 `aws-exports.js` 파일의 내용을 그대로 입력.  
 참조: [Amplify 초기화](https://joondong.tistory.com/99)  
+  
 **예제**
 ```
 const awsmobile = {
@@ -50,7 +56,7 @@ const awsmobile = {
     "federationTarget": "COGNITO_USER_POOLS"
 };
 ```
-&nbsp;
+  
 # 참조
 ### [관련 포스트 목록](https://joondong.tistory.com/151)
 ### [인스타그램 클론코딩 앱 (리액트 네이티브)](https://github.com/JoonDong2/instagureng-app)
