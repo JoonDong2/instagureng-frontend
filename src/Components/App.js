@@ -27,8 +27,6 @@ export default() => {
 
     const verifyAuthentication = async() => {
         try {
-            // 앱이 시작될 때 너무 빨리 실행되면 오류가 발생할 수 있다.
-            await delay(1300);
             await Auth.currentAuthenticatedUser();
             //console.log("user: ", user); console.log(await Auth.currentCredentials());
             setIsLoggedIn(true);

@@ -7,7 +7,12 @@ import Client from './Apollo/Client';
 import Amplify from 'aws-amplify'
 import aws_exports from './aws-exports'
 import { AuthProvider } from './Contexts/AuthContext';
-Amplify.configure(aws_exports)
+
+const amplifyConfiture = async () => {
+    await Amplify.configure(aws_exports);
+}
+
+amplifyConfiture();
 
 ReactDOM.render(
     <ApolloProvider client={Client}>
