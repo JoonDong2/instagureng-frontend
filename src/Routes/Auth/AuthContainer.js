@@ -40,12 +40,14 @@ export default() => {
                         setIsLoggedIn(true);
                     } catch ({ code }) {
                         if(code === "UserNotFoundException") {
-                            toast.error("User does not exist.");
+                            toast.error("사용자가 존재하지 않습니다.");
                         } else if(code === "UserNotConfirmedException") {
-                            toast.error("Can't request secret, try again.");
+                            toast.error("인증되지 않은 사용자입니다. 다시 인증해 주세요.");
                             setAction("confirm");
+                        } else if(code === "NotAuthorizedException") {
+                            toast.error("비밀번호가 틀렸습니다.");
                         } else {
-                            toast.error("Someting went wrong.");
+                            toast.error("알 수 없는 오류가 발생하였습니다.")
                         }
                         console.log("error: ",code);
                     }
