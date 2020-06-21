@@ -27,16 +27,13 @@ export default() => {
 
     const verifyAuthentication = async() => {
         try {
-            // 너무 빨리 리디렉션 페이지로 이동하면 토큰이 전에 인증이 수행될 수 있다. await delay(1000);
+            // 앱이 시작될 때 너무 빨리 실행되면 오류가 발생할 수 있다.
+            await delay(1300);
             await Auth.currentAuthenticatedUser();
             //console.log("user: ", user); console.log(await Auth.currentCredentials());
             setIsLoggedIn(true);
         } catch (error) {
             console.log("error: ", error);
-            //setIsLoggedIn(false); console.log('error: ', error);
-            await delay(1500);
-            await Auth.currentAuthenticatedUser();
-            setIsLoggedIn(true);
         }
     }
 
