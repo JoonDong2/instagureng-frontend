@@ -23,6 +23,7 @@ export default() => {
     
     const secret = useInput("");
 
+    // Cognito에서 동일한 이메일을 발견하고 리디렉션하는 경우
     if(existMessage === false && window.location.href.includes("EmailExistError")) {
         toast.error("이미 동일한 이메일이 존재합니다.");
         existMessage = true;
